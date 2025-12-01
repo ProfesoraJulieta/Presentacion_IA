@@ -24,7 +24,6 @@
             --success: #2ecc71;
             --error: #e74c3c;
             --hover-blue: #3498db;
-            /* Color azul brillante para interacciones */
         }
 
         * {
@@ -93,7 +92,7 @@
             transition-delay: 0.6s;
         }
 
-        /* --- EFECTO TRAGAMONEDAS (SLOT MACHINE) --- */
+        /* --- EFECTO TRAGAMONEDAS --- */
         @keyframes slotBlur {
             0% {
                 transform: translateY(0);
@@ -171,6 +170,7 @@
         #hero h1 {
             font-size: 4rem;
             background: -webkit-linear-gradient(45deg, var(--primary), var(--secondary));
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -217,7 +217,7 @@
             padding-bottom: 100px;
         }
 
-        /* FLIP CARD: EFECTO INTERACTIVO APLICADO */
+        /* FLIP CARD */
         .flip-card {
             background-color: transparent;
             width: 260px;
@@ -226,10 +226,8 @@
             cursor: pointer;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
-            /* Transición para el zoom */
         }
 
-        /* Zoom al pasar el mouse sobre toda la tarjeta */
         .flip-card:hover {
             transform: translateY(-10px) scale(1.03);
         }
@@ -266,13 +264,11 @@
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Borde Azul y Sombra Azul al Hover en el FRENTE */
         .flip-card:hover .flip-card-front {
             border-color: var(--hover-blue) !important;
             box-shadow: 0 15px 35px rgba(52, 152, 219, 0.4);
         }
 
-        /* Estilos específicos de Beneficios */
         #benefits .flip-card-front {
             border: 2px solid #eee;
         }
@@ -284,7 +280,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* Pequeño pop del icono al hover */
         #benefits .flip-card:hover .flip-card-front i {
             transform: scale(1.1);
             color: var(--hover-blue);
@@ -312,7 +307,7 @@
             font-weight: 500;
         }
 
-        /* --- SECCIÓN 3: PROMPT (CAJAS TAMBIÉN INTERACTIVAS) --- */
+        /* --- SECCIÓN 3: PROMPT --- */
         #coding {
             background-color: var(--dark);
             color: white;
@@ -341,7 +336,6 @@
             border-left: 5px solid var(--secondary);
         }
 
-        /* Efecto Hover para la caja de explicación */
         .prompt-explanation:hover {
             transform: scale(1.02);
             box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
@@ -407,7 +401,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Efecto HOVER Tarjetas GitHub */
         .step:hover {
             transform: translateY(-5px) scale(1.03);
             box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
@@ -482,18 +475,14 @@
             min-width: 300px;
             text-align: left;
             border: 2px solid transparent;
-            /* Base para el borde */
             border-left: 5px solid var(--secondary);
-            /* Borde lateral original */
             transition: all 0.3s ease;
         }
 
-        /* Efecto HOVER para Info Cards (Estático/Dinámico) */
         .info-card:hover {
             transform: translateY(-5px) scale(1.02);
             box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
             border-color: var(--hover-blue);
-            /* Pinta todo el borde de azul */
         }
 
         .info-card.dynamic {
@@ -504,7 +493,6 @@
 
         .info-card.dynamic:hover {
             opacity: 1;
-            /* Al hacer hover se vuelve totalmente visible */
         }
 
         .info-card h4 {
@@ -523,7 +511,7 @@
             line-height: 1.4;
         }
 
-        /* --- SECCIÓN 6: QUIZ (FLIP CARDS ESTILO QUIZ) --- */
+        /* --- SECCIÓN 5: QUIZ (FLIP CARDS ESTILO QUIZ) --- */
         #quiz {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -547,7 +535,6 @@
             margin-top: 20px;
         }
 
-        /* Heredamos .flip-card pero ajustamos tamaño */
         .quiz-card {
             background-color: transparent;
             width: 100%;
@@ -555,7 +542,6 @@
             perspective: 1000px;
         }
 
-        /* Frente del Quiz */
         .quiz-card .flip-card-front {
             color: var(--dark);
             align-items: flex-start;
@@ -566,10 +552,8 @@
             flex-direction: column;
             justify-content: space-between;
             border: 2px solid white;
-            /* Borde base */
         }
 
-        /* Dorso del Quiz (Éxito) */
         .quiz-card .flip-card-back {
             background: var(--success);
             color: white;
@@ -630,12 +614,10 @@
             border-color: #bbb;
         }
 
-        /* Animación de error (temblor) en el frente */
         .shake-card {
             animation: shake 0.5s;
         }
 
-        /* Botón de Nueva Pregunta */
         .refresh-btn {
             margin-top: 40px;
             margin-bottom: 40px;
@@ -719,7 +701,7 @@
 
                 <div class="cards-container animate-up delay-2">
 
-                    <!-- Card 1: Programar sin Saber -->
+                    <!-- Card 1 -->
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -734,7 +716,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Crea Recursos -->
+                    <!-- Card 2 -->
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -750,7 +732,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Adaptación -->
+                    <!-- Card 3 -->
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -766,7 +748,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 4: Tu Aprendizaje -->
+                    <!-- Card 4 -->
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
@@ -813,8 +795,7 @@
                             style="background: #333; padding: 20px; border-radius: 10px; border-left: 5px solid #9b59b6;">
                             <h4 style="color: #fff; margin-bottom: 15px;">¿Por qué razonamiento 3PRO?</h4>
                             <p style="color: #ccc; font-size: 1rem;">Para tareas de programación, el modelo
-                                <strong>3PRO</strong> (o de razonamiento avanzado) es ideal porque:
-                            </p>
+                                <strong>3PRO</strong> (o de razonamiento avanzado) es ideal porque:</p>
                             <ul style="color: #ccc; margin-left: 20px; margin-top: 10px;">
                                 <li>Entiende lógica compleja de juegos.</li>
                                 <li>Comete menos errores de sintaxis HTML/JS.</li>
@@ -859,8 +840,7 @@
                         <h4><i class="fa-solid fa-file-code" style="color: var(--secondary);"></i> Proyectos Estáticos
                             (Soportado)</h4>
                         <p>Sitios que muestran información fija (HTML, imágenes) sin procesar datos complejos.
-                            <strong>Es ideal para los juegos y guías que hacemos con Gemini.</strong> ¡Y es gratis!
-                        </p>
+                            <strong>Es ideal para los juegos y guías que hacemos con Gemini.</strong> ¡Y es gratis!</p>
                     </div>
                     <div class="info-card dynamic">
                         <h4><i class="fa-solid fa-server" style="color: #555;"></i> Proyectos Dinámicos (No Soportado)
@@ -872,7 +852,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 5: QUIZ (FLIP CARDS) -->
+        <!-- SECCIÓN 5: QUIZ (FLIP CARDS ESTILO QUIZ) -->
         <section id="quiz">
             <div class="container">
                 <div class="animate-up">
